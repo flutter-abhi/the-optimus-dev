@@ -38,8 +38,8 @@ const ImageSlider = () => {
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
-          depth: 100,
-          modifier: 2.5,
+          depth: 150,       // Increased depth for a stronger 3D effect
+          modifier: 1.5,    // Smoother transition modifier
           slideShadows: false,
         }}
         autoplay={{
@@ -62,16 +62,16 @@ const ImageSlider = () => {
         {images.map((index) => (
           <SwiperSlide key={index} className="swiper-slide">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0.1, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
+              exit={{ opacity: 0.1, y: -20 }}
               transition={{ duration: 0.5 }}
               className="slide-content"
             >
               <Image
                 src={`/mobile/mob${index}.jpg`}
                 alt={`Mobile ${index}`}
-                width={300}
+                width={1000}
                 height={600}
                 className="slider-image"
                 priority={index === 1}
@@ -89,41 +89,41 @@ const ImageSlider = () => {
 
 export default function MobileDevelopmentPage() {
   return (
-    <div className="flex flex-col min-h-screen">
-      {/* Hero Section */}
-      <section className="w-full hero-section bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">
-        <div className="container px-4 md:px-6">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <ScrollReveal>
-              <div className="space-y-4 hero-content">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  Mobile Application Development
-                </h1>
-                <p className="text-zinc-300 md:text-xl">
-                  We create native and cross-platform mobile applications that engage users and drive business growth.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <Link href="/contact">
-                    <Button className="bg-white text-zinc-900 hover:bg-zinc-100">
-                      Get Started
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
-                  <Link href="/portfolio?category=mobile">
-                    <Button variant="outline" className="border-white text-white hover:bg-white/10" style={{ color: "black" }}>
-                      View Mobile Projects
-                    </Button>
-                  </Link>
+      <div className="flex flex-col min-h-screen">
+        {/* Hero Section */}
+        <section className="w-full hero-section bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">
+          <div className="container px-4 md:px-6">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <ScrollReveal>
+                <div className="space-y-4 hero-content">
+                  <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                    Mobile Application Development
+                  </h1>
+                  <p className="text-zinc-300 md:text-xl">
+                    We create native and cross-platform mobile applications that engage users and drive business growth.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <Link href="/contact">
+                      <Button className="bg-white text-zinc-900 hover:bg-zinc-100">
+                        Get Started
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </Link>
+                    <Link href="/portfolio?category=mobile">
+                      <Button variant="outline" className="border-white text-white hover:bg-white/10" style={{ color: "black" }}>
+                        View Mobile Projects
+                      </Button>
+                    </Link>
+                  </div>
                 </div>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal delay={0.2}>
-              <div className="relative overflow-visible rounded-lg">
-                <ImageSlider />
-              </div>
-            </ScrollReveal>
+              </ScrollReveal>
+              <ScrollReveal delay={0.2}>
+                <div className="relative overflow-visible rounded-lg">
+                  <ImageSlider />
+                </div>
+              </ScrollReveal>
+            </div>
           </div>
-        </div>
       </section>
 
       {/* Services Overview */}

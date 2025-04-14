@@ -1,6 +1,8 @@
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight, Code, Database, Laptop, Monitor, Phone, Settings } from "lucide-react"
+import webi from '../../public/services/webpage.jpg'
+import desk from '../../public/services/deskt.png'
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -66,7 +68,7 @@ export default function ServicesPage() {
               </div>
               <div className="relative aspect-video overflow-hidden rounded-lg">
                 <Image
-                  src="/placeholder.svg?height=720&width=1280"
+                  src={webi}
                   alt="Web Development"
                   fill
                   className="object-cover"
@@ -162,7 +164,7 @@ export default function ServicesPage() {
               </div>
               <div className="relative aspect-video overflow-hidden rounded-lg">
                 <Image
-                  src="/placeholder.svg?height=720&width=1280"
+                  src={desk}
                   alt="Desktop Development"
                   fill
                   className="object-cover"

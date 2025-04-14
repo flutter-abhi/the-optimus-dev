@@ -5,27 +5,16 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Menu, X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
-import { useIsMobile } from "@/hooks/use-mobile"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const [isMounted, setIsMounted] = useState(false)
   const pathname = usePathname()
-  const isMobile = useIsMobile()
-
-  // Handle mounting state to avoid hydration issues
-  useEffect(() => {
-    setIsMounted(true)
-  }, [])
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const handleScroll = () => {
-        setScrolled(window.scrollY > 10)
-      }
+    if (typeof window !== "undefined") {
+      const handleScroll = () => setScrolled(window.scrollY > 10)
       window.addEventListener("scroll", handleScroll)
       return () => window.removeEventListener("scroll", handleScroll)
     }
@@ -39,23 +28,19 @@ export default function Header() {
     { href: "/contact", label: "Contact" },
   ]
 
-  // Don't render anything until mounted to avoid hydration issues
-  if (!isMounted) {
-    return <header className="h-16"></header>
-  }
-
   return (
-    <header className={cn(
-      "sticky top-0 z-50 w-full transition-all duration-300",
-      scrolled ? "bg-white shadow-sm" : "bg-transparent"
-    )}>
+    <header
+      className={cn(
+        "sticky top-0 z-50 w-full transition-all duration-300",
+        // Use a solid background to ensure visibility from the start.
+        "bg-white",
+        scrolled && "shadow-sm"
+      )}
+    >
       <div className="container flex h-16 items-center justify-between px-4">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <span className={cn(
-            "text-2xl font-bold",
-            scrolled ? "text-zinc-900" : "text-white"
-          )}>
+          <span className={cn("text-2xl font-bold", "text-zinc-900")}>
             optimusDev
           </span>
         </Link>
@@ -66,10 +51,7 @@ export default function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className={cn(
-                "text-sm font-medium",
-                scrolled ? "text-zinc-600" : "text-white"
-              )}
+              className={cn("text-sm font-medium", "text-zinc-600")}
             >
               {item.label}
             </Link>
@@ -78,10 +60,7 @@ export default function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          className={cn(
-            "md:hidden",
-            scrolled ? "text-zinc-900" : "text-white"
-          )}
+          className={cn("md:hidden", "text-zinc-900")}
           onClick={() => setIsMenuOpen(true)}
         >
           <Menu className="h-6 w-6" />
@@ -112,10 +91,7 @@ export default function Header() {
                       key={item.href}
                       href={item.href}
                       className="text-white text-2xl"
-                      onClick={(e) => {
-                        // Close menu immediately
-                        setIsMenuOpen(false)
-                      }}
+                      onClick={() => setIsMenuOpen(false)}
                     >
                       {item.label}
                     </Link>

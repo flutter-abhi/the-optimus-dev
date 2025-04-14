@@ -1,7 +1,20 @@
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight, CheckCircle, Laptop, Monitor, Database, Code, Shield, Settings } from "lucide-react"
+import netimg from '../../../public/services/icons/Microsoft_.NET_logo.png'
+import Cimg from '../../../public/services/icons/icons8-c-sharp-logo-480.png'
+import wpf from '../../../public/services/icons/wpf-icon-5.png'
+import objcimg from '../../../public/services/icons/objC.png'
+import swiftimg from '../../../public/services/icons/swift.jpeg'
+//import swiftuiimg from '../../../public/services/icons/swift.jpeg'
+import winui from '../../../public/services/icons/logo-winui.png'
+import electronimg from '../../../public/services/icons/electron.png'
+import pythonimg from '../../../public/services/icons/python-logo.png'
+import swiftui from '../../../public/services/icons/swiftui.jpeg'
+import tauri from '../../../public/services/icons/tarui.png'
+import desktopdash from '../../../public/services/dashboaddesk.jpg'
 
+import qt from '../../../public/services/icons/qt.jpeg'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -30,17 +43,22 @@ export default function DesktopDevelopmentPage() {
                     </Button>
                   </Link>
                   <Link href="/portfolio?category=desktop">
+                      <Button variant="outline" className="border-white text-white hover:bg-white/10" style={{ color: "black" }}>
+                        View Desktop Projects
+                      </Button>
+                    </Link>
+                  {/* <Link href="/portfolio?category=desktop">
                     <Button variant="outline" className="border-white text-white hover:bg-white/10">
                       View Desktop Projects
                     </Button>
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
               <div className="relative aspect-video overflow-hidden rounded-lg">
                 <Image
-                  src="/placeholder.svg?height=720&width=1280"
+                  src={desktopdash}
                   alt="Desktop Development"
                   fill
                   className="object-cover"
@@ -276,7 +294,7 @@ export default function DesktopDevelopmentPage() {
                   <Card className="bg-white border-none shadow-sm hover:shadow-md transition-all duration-300">
                     <CardContent className="p-6 flex flex-col items-center text-center">
                       <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                        <Image src="/placeholder.svg?height=64&width=64" alt=".NET" width={64} height={64} />
+                        <Image src ={netimg} alt=".NET" width={64} height={64} />
                       </div>
                       <h3 className="font-medium">.NET</h3>
                     </CardContent>
@@ -287,7 +305,7 @@ export default function DesktopDevelopmentPage() {
                   <Card className="bg-white border-none shadow-sm hover:shadow-md transition-all duration-300">
                     <CardContent className="p-6 flex flex-col items-center text-center">
                       <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                        <Image src="/placeholder.svg?height=64&width=64" alt="WPF" width={64} height={64} />
+                        <Image src ={wpf} alt="WPF" width={64} height={64} />
                       </div>
                       <h3 className="font-medium">WPF</h3>
                     </CardContent>
@@ -298,7 +316,7 @@ export default function DesktopDevelopmentPage() {
                   <Card className="bg-white border-none shadow-sm hover:shadow-md transition-all duration-300">
                     <CardContent className="p-6 flex flex-col items-center text-center">
                       <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                        <Image src="/placeholder.svg?height=64&width=64" alt="C#" width={64} height={64} />
+                        <Image src ={Cimg} alt="C#" width={64} height={64} />
                       </div>
                       <h3 className="font-medium">C#</h3>
                     </CardContent>
@@ -309,7 +327,7 @@ export default function DesktopDevelopmentPage() {
                   <Card className="bg-white border-none shadow-sm hover:shadow-md transition-all duration-300">
                     <CardContent className="p-6 flex flex-col items-center text-center">
                       <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                        <Image src="/placeholder.svg?height=64&width=64" alt="WinUI" width={64} height={64} />
+                        <Image src ={winui} alt="WinUI" width={64} height={64} />
                       </div>
                       <h3 className="font-medium">WinUI</h3>
                     </CardContent>
@@ -324,7 +342,7 @@ export default function DesktopDevelopmentPage() {
                   <Card className="bg-white border-none shadow-sm hover:shadow-md transition-all duration-300">
                     <CardContent className="p-6 flex flex-col items-center text-center">
                       <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                        <Image src="/placeholder.svg?height=64&width=64" alt="Swift" width={64} height={64} />
+                      <Image src ={swiftimg} alt="Swift" width={64} height={64} />
                       </div>
                       <h3 className="font-medium">Swift</h3>
                     </CardContent>
@@ -335,7 +353,7 @@ export default function DesktopDevelopmentPage() {
                   <Card className="bg-white border-none shadow-sm hover:shadow-md transition-all duration-300">
                     <CardContent className="p-6 flex flex-col items-center text-center">
                       <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                        <Image src="/placeholder.svg?height=64&width=64" alt="SwiftUI" width={64} height={64} />
+                      <Image src ={swiftui} alt="SwiftUI" width={64} height={64} />
                       </div>
                       <h3 className="font-medium">SwiftUI</h3>
                     </CardContent>
@@ -346,7 +364,7 @@ export default function DesktopDevelopmentPage() {
                   <Card className="bg-white border-none shadow-sm hover:shadow-md transition-all duration-300">
                     <CardContent className="p-6 flex flex-col items-center text-center">
                       <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                        <Image src="/placeholder.svg?height=64&width=64" alt="Objective-C" width={64} height={64} />
+                      <Image src ={objcimg} alt="Objective-C" width={64} height={64} />
                       </div>
                       <h3 className="font-medium">Objective-C</h3>
                     </CardContent>
@@ -372,7 +390,7 @@ export default function DesktopDevelopmentPage() {
                   <Card className="bg-white border-none shadow-sm hover:shadow-md transition-all duration-300">
                     <CardContent className="p-6 flex flex-col items-center text-center">
                       <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                        <Image src="/placeholder.svg?height=64&width=64" alt="Electron" width={64} height={64} />
+                        <Image src ={electronimg} alt="Electron" width={64} height={64} />
                       </div>
                       <h3 className="font-medium">Electron</h3>
                     </CardContent>
@@ -383,7 +401,7 @@ export default function DesktopDevelopmentPage() {
                   <Card className="bg-white border-none shadow-sm hover:shadow-md transition-all duration-300">
                     <CardContent className="p-6 flex flex-col items-center text-center">
                       <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                        <Image src="/placeholder.svg?height=64&width=64" alt="Qt" width={64} height={64} />
+                        <Image src ={qt} alt="Qt" width={64} height={64} />
                       </div>
                       <h3 className="font-medium">Qt</h3>
                     </CardContent>
@@ -394,7 +412,7 @@ export default function DesktopDevelopmentPage() {
                   <Card className="bg-white border-none shadow-sm hover:shadow-md transition-all duration-300">
                     <CardContent className="p-6 flex flex-col items-center text-center">
                       <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                        <Image src="/placeholder.svg?height=64&width=64" alt="Tauri" width={64} height={64} />
+                        <Image src ={tauri} alt="Tauri" width={64} height={64} />
                       </div>
                       <h3 className="font-medium">Tauri</h3>
                     </CardContent>
@@ -405,7 +423,7 @@ export default function DesktopDevelopmentPage() {
                   <Card className="bg-white border-none shadow-sm hover:shadow-md transition-all duration-300">
                     <CardContent className="p-6 flex flex-col items-center text-center">
                       <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                        <Image src="/placeholder.svg?height=64&width=64" alt="Python" width={64} height={64} />
+                        <Image src ={pythonimg} alt="Python" width={64} height={64} />
                       </div>
                       <h3 className="font-medium">Python</h3>
                     </CardContent>
@@ -515,10 +533,10 @@ export default function DesktopDevelopmentPage() {
                   </Button>
                 </Link>
                 <Link href="/services">
-                  <Button variant="outline" className="border-white text-white hover:bg-white/10">
-                    Explore Other Services
-                  </Button>
-                </Link>
+                      <Button variant="outline" className="border-white text-white hover:bg-white/10" style={{ color: "black" }}>
+                      Explore Other Services
+                      </Button>
+                    </Link>
               </div>
             </ScrollReveal>
           </div>

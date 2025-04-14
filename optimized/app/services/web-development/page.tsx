@@ -1,11 +1,29 @@
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight, CheckCircle, Code, Database, Globe, Layout, Server } from "lucide-react"
-
+import webi from '../../../public/services/webpage.jpg'
 import { Button } from "@/components/ui/button"
+
+import react from '../../../public/services/icons/React-icon.png'
+import next from '../../../public/services/icons/next-js.png'
+import type from '../../../public/services/icons/typescript.png'
+import tailw from '../../../public/services/icons/tailwind_css.png'
+import nodeimg from '../../../public/services/icons/node-js.png'
+import expressimg from '../../../public/services/icons/express-js.png'
+import pythonimg from '../../../public/services/icons/python-logo.png'
+import dja from '../../../public/services/icons/Django-Logo.png'
+import fireimg from '../../../public/services/icons/firebase.jpeg'
+import vercelimg from '../../../public/services/icons/vercel.jpg'
+import postimg from '../../../public/services/icons/postgresql-icon.png'
+import mongoimg from '../../../public/services/icons/mongodb.jpg'
+import redisimg from '../../../public/services/icons/redis-icon.png'
+import dockerimg from '../../../public/services/icons/Docker-Symbol.png'
+import Awsimg from '../../../public/services/icons/Aws.png'
+import gitimg from '../../../public/services/icons/github.jpeg'
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ScrollReveal } from "@/components/scroll-reveal"
+import { types } from "util"
 
 export default function WebDevelopmentPage() {
   return (
@@ -31,17 +49,17 @@ export default function WebDevelopmentPage() {
                     </Button>
                   </Link>
                   <Link href="/portfolio?category=web">
-                    <Button variant="outline" className="border-white text-white hover:bg-white/10">
-                      View Web Projects
-                    </Button>
-                  </Link>
+                      <Button variant="outline" className="border-white text-white hover:bg-white/10" style={{ color: "black" }}>
+                        View Web Projects
+                      </Button>
+                    </Link>
                 </div>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
               <div className="relative aspect-video overflow-hidden rounded-lg">
                 <Image
-                  src="/placeholder.svg?height=720&width=1280"
+                  src={webi}
                   alt="Web Development"
                   fill
                   className="object-cover"
@@ -278,7 +296,7 @@ export default function WebDevelopmentPage() {
                   <Card className="bg-white border-none shadow-sm hover:shadow-md transition-all duration-300">
                     <CardContent className="p-6 flex flex-col items-center text-center">
                       <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                        <Image src="/placeholder.svg?height=64&width=64" alt="React" width={64} height={64} />
+                        <Image src={react} alt="React" width={64} height={64} />
                       </div>
                       <h3 className="font-medium">React</h3>
                     </CardContent>
@@ -289,7 +307,7 @@ export default function WebDevelopmentPage() {
                   <Card className="bg-white border-none shadow-sm hover:shadow-md transition-all duration-300">
                     <CardContent className="p-6 flex flex-col items-center text-center">
                       <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                        <Image src="/placeholder.svg?height=64&width=64" alt="Next.js" width={64} height={64} />
+                        <Image src={next} alt="Next.js" width={64} height={64} />
                       </div>
                       <h3 className="font-medium">Next.js</h3>
                     </CardContent>
@@ -300,7 +318,7 @@ export default function WebDevelopmentPage() {
                   <Card className="bg-white border-none shadow-sm hover:shadow-md transition-all duration-300">
                     <CardContent className="p-6 flex flex-col items-center text-center">
                       <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                        <Image src="/placeholder.svg?height=64&width=64" alt="TypeScript" width={64} height={64} />
+                        <Image src={type} alt="TypeScript" width={64} height={64} />
                       </div>
                       <h3 className="font-medium">TypeScript</h3>
                     </CardContent>
@@ -311,7 +329,7 @@ export default function WebDevelopmentPage() {
                   <Card className="bg-white border-none shadow-sm hover:shadow-md transition-all duration-300">
                     <CardContent className="p-6 flex flex-col items-center text-center">
                       <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                        <Image src="/placeholder.svg?height=64&width=64" alt="Tailwind CSS" width={64} height={64} />
+                        <Image src={tailw} alt="Tailwind CSS" width={64} height={64} />
                       </div>
                       <h3 className="font-medium">Tailwind CSS</h3>
                     </CardContent>
@@ -326,7 +344,7 @@ export default function WebDevelopmentPage() {
                   <Card className="bg-white border-none shadow-sm hover:shadow-md transition-all duration-300">
                     <CardContent className="p-6 flex flex-col items-center text-center">
                       <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                        <Image src="/placeholder.svg?height=64&width=64" alt="Node.js" width={64} height={64} />
+                        <Image src ={nodeimg} alt="Node.js" width={64} height={64} />
                       </div>
                       <h3 className="font-medium">Node.js</h3>
                     </CardContent>
@@ -337,7 +355,7 @@ export default function WebDevelopmentPage() {
                   <Card className="bg-white border-none shadow-sm hover:shadow-md transition-all duration-300">
                     <CardContent className="p-6 flex flex-col items-center text-center">
                       <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                        <Image src="/placeholder.svg?height=64&width=64" alt="Express" width={64} height={64} />
+                        <Image  src ={expressimg}  alt="Express" width={64} height={64} />
                       </div>
                       <h3 className="font-medium">Express</h3>
                     </CardContent>
@@ -348,7 +366,7 @@ export default function WebDevelopmentPage() {
                   <Card className="bg-white border-none shadow-sm hover:shadow-md transition-all duration-300">
                     <CardContent className="p-6 flex flex-col items-center text-center">
                       <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                        <Image src="/placeholder.svg?height=64&width=64" alt="Python" width={64} height={64} />
+                        <Image  src ={pythonimg}  alt="Python" width={64} height={64} />
                       </div>
                       <h3 className="font-medium">Python</h3>
                     </CardContent>
@@ -359,7 +377,7 @@ export default function WebDevelopmentPage() {
                   <Card className="bg-white border-none shadow-sm hover:shadow-md transition-all duration-300">
                     <CardContent className="p-6 flex flex-col items-center text-center">
                       <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                        <Image src="/placeholder.svg?height=64&width=64" alt="Django" width={64} height={64} />
+                        <Image  src ={dja}  alt="Django" width={64} height={64} />
                       </div>
                       <h3 className="font-medium">Django</h3>
                     </CardContent>
@@ -374,7 +392,7 @@ export default function WebDevelopmentPage() {
                   <Card className="bg-white border-none shadow-sm hover:shadow-md transition-all duration-300">
                     <CardContent className="p-6 flex flex-col items-center text-center">
                       <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                        <Image src="/placeholder.svg?height=64&width=64" alt="PostgreSQL" width={64} height={64} />
+                        <Image src ={postimg}  alt="PostgreSQL" width={64} height={64} />
                       </div>
                       <h3 className="font-medium">PostgreSQL</h3>
                     </CardContent>
@@ -385,7 +403,7 @@ export default function WebDevelopmentPage() {
                   <Card className="bg-white border-none shadow-sm hover:shadow-md transition-all duration-300">
                     <CardContent className="p-6 flex flex-col items-center text-center">
                       <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                        <Image src="/placeholder.svg?height=64&width=64" alt="MongoDB" width={64} height={64} />
+                        <Image  src ={mongoimg}  alt="MongoDB" width={64} height={64} />
                       </div>
                       <h3 className="font-medium">MongoDB</h3>
                     </CardContent>
@@ -396,7 +414,7 @@ export default function WebDevelopmentPage() {
                   <Card className="bg-white border-none shadow-sm hover:shadow-md transition-all duration-300">
                     <CardContent className="p-6 flex flex-col items-center text-center">
                       <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                        <Image src="/placeholder.svg?height=64&width=64" alt="Redis" width={64} height={64} />
+                        <Image  src ={redisimg} alt="Redis" width={64} height={64} />
                       </div>
                       <h3 className="font-medium">Redis</h3>
                     </CardContent>
@@ -407,7 +425,7 @@ export default function WebDevelopmentPage() {
                   <Card className="bg-white border-none shadow-sm hover:shadow-md transition-all duration-300">
                     <CardContent className="p-6 flex flex-col items-center text-center">
                       <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                        <Image src="/placeholder.svg?height=64&width=64" alt="Firebase" width={64} height={64} />
+                        <Image  src ={fireimg}  alt="Firebase" width={64} height={64} />
                       </div>
                       <h3 className="font-medium">Firebase</h3>
                     </CardContent>
@@ -422,7 +440,7 @@ export default function WebDevelopmentPage() {
                   <Card className="bg-white border-none shadow-sm hover:shadow-md transition-all duration-300">
                     <CardContent className="p-6 flex flex-col items-center text-center">
                       <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                        <Image src="/placeholder.svg?height=64&width=64" alt="Docker" width={64} height={64} />
+                        <Image  src ={dockerimg} alt="Docker" width={64} height={64} />
                       </div>
                       <h3 className="font-medium">Docker</h3>
                     </CardContent>
@@ -433,7 +451,7 @@ export default function WebDevelopmentPage() {
                   <Card className="bg-white border-none shadow-sm hover:shadow-md transition-all duration-300">
                     <CardContent className="p-6 flex flex-col items-center text-center">
                       <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                        <Image src="/placeholder.svg?height=64&width=64" alt="AWS" width={64} height={64} />
+                        <Image  src ={Awsimg}  alt="AWS" width={64} height={64} />
                       </div>
                       <h3 className="font-medium">AWS</h3>
                     </CardContent>
@@ -444,7 +462,7 @@ export default function WebDevelopmentPage() {
                   <Card className="bg-white border-none shadow-sm hover:shadow-md transition-all duration-300">
                     <CardContent className="p-6 flex flex-col items-center text-center">
                       <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                        <Image src="/placeholder.svg?height=64&width=64" alt="GitHub" width={64} height={64} />
+                        <Image  src ={gitimg}  alt="GitHub" width={64} height={64} />
                       </div>
                       <h3 className="font-medium">GitHub</h3>
                     </CardContent>
@@ -455,7 +473,7 @@ export default function WebDevelopmentPage() {
                   <Card className="bg-white border-none shadow-sm hover:shadow-md transition-all duration-300">
                     <CardContent className="p-6 flex flex-col items-center text-center">
                       <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                        <Image src="/placeholder.svg?height=64&width=64" alt="Vercel" width={64} height={64} />
+                        <Image  src ={vercelimg} alt="Vercel" width={64} height={64} />
                       </div>
                       <h3 className="font-medium">Vercel</h3>
                     </CardContent>

@@ -37,7 +37,6 @@
         transform: translate(-50%, -50%) scale(1);
         opacity: 0.5;
     }
-
     100% {
         transform: translate(-50%, -50%) scale(1.1);
         opacity: 0.8;
@@ -47,10 +46,10 @@
 /* Swiper Container Styles */
 .swiper-container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 40px 0;
-    overflow: visible;
+    overflow: hidden;
     user-select: none;
     background: transparent;
 }
@@ -62,7 +61,7 @@
     transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     transform-origin: center center;
     opacity: 0.6;
-    filter: brightness(0.7);
+    filter: brightness(0.4);
     transform: scale(0.9);
     border-radius: 24px;
     overflow: hidden;
@@ -81,7 +80,7 @@
 .slider-image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 24px;
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
     transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
@@ -104,14 +103,14 @@
 /* Side Slides Styles */
 .swiper-slide-prev {
     transform: translateX(-30%) scale(0.9) !important;
-    opacity: 0.8 !important;
-    filter: brightness(0.8);
+    opacity: 0.5 !important;
+    filter: brightness(1);
 }
 
 .swiper-slide-next {
     transform: translateX(30%) scale(0.9) !important;
-    opacity: 0.8 !important;
-    filter: brightness(0.8);
+    opacity: 0.6 !important;
+    filter: brightness(1);
 }
 
 /* Navigation Buttons */
@@ -182,14 +181,11 @@
 }
 
 @keyframes float {
-
-    0%,
-    100% {
+    0%, 100% {
         transform: translateZ(20px) rotateY(0deg) rotateX(0deg);
     }
-
     50% {
-        transform: translateZ(20px) rotateY(5deg) rotateX(2deg);
+        transform: translateZ(25px) rotateY(3deg) rotateX(1deg);
     }
 }
 
@@ -199,7 +195,6 @@
         width: 250px !important;
         height: 450px;
     }
-
     .swiper-slide-active {
         transform: scale(1.05);
     }
@@ -209,12 +204,10 @@
     .image-slider {
         padding: 40px 0;
     }
-
     .swiper-slide {
         width: 200px !important;
         height: 350px;
     }
-
     .swiper-button-prev,
     .swiper-button-next {
         width: 40px;
@@ -226,16 +219,13 @@
     .image-slider {
         padding: 30px 0;
     }
-
     .swiper-slide {
         width: 180px !important;
         height: 300px;
     }
-
     .swiper-slide-prev {
         transform: translateX(-20%) scale(0.9) !important;
     }
-
     .swiper-slide-next {
         transform: translateX(20%) scale(0.9) !important;
     }
