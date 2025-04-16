@@ -3,6 +3,8 @@ import Image from "next/image"
 import { ArrowRight, Code, Database, Laptop, Monitor, Phone, Settings } from "lucide-react"
 import webi from '../../public/services/webpage.jpg'
 import desk from '../../public/services/deskt.png'
+import mobileimg from '../../public/services/icons/mobile_app.png'
+
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -116,7 +118,7 @@ export default function ServicesPage() {
               </div>
               <div className="relative aspect-video overflow-hidden rounded-lg md:order-1 border border-zinc-200 shadow-lg">
                   <Image
-                  src="/mob.jpg?height=720&width=720"
+                  src={mobileimg}
                   alt="Mobile Development"
                   fill
                   className="object-contain p-4"

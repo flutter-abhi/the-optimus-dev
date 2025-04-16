@@ -12,6 +12,8 @@ import electronimg from '../../../public/services/icons/electron.png'
 import pythonimg from '../../../public/services/icons/python-logo.png'
 import swiftui from '../../../public/services/icons/swiftui.jpeg'
 import tauri from '../../../public/services/icons/tarui.png'
+import mobileimg from '../../../public/services/icons/mobile_app.png'
+
 import desktopdash from '../../../public/services/dashboaddesk.jpg'
 
 import qt from '../../../public/services/icons/qt.jpeg'

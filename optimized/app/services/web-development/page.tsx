@@ -582,11 +582,12 @@ export default function WebDevelopmentPage() {
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
+              
                 <Link href="/services">
-                  <Button variant="outline" className="border-white text-white hover:bg-white/10">
-                    Explore Other Services
-                  </Button>
-                </Link>
+                      <Button variant="outline" className="border-white text-white hover:bg-white/10" style={{ color: "black" }}>
+                      Explore Other Services
+                      </Button>
+                    </Link>
               </div>
             </ScrollReveal>
           </div>

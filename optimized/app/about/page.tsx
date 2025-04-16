@@ -1,7 +1,9 @@
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, Award, Calendar, CheckCircle, Users } from "lucide-react"
-
+import piyushimg from '../../public/services/icons/Piyush.jpg'
+import devimg from '../../public/services/icons/developers-team.png'
+import abhiimg from '../../public/services/icons/abhi-removebg-preview.png'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -30,7 +32,7 @@ export default function AboutPage() {
             <div className="space-y-4">
               <h2 className="text-3xl font-bold">Our Story</h2>
               <p className="text-zinc-500 md:text-lg">
-                Founded in 2018, optimusDev began with a simple mission: to create digital solutions that make a
+                Founded in 2024, optimusDev began with a simple mission: to create digital solutions that make a
                 difference. What started as a small team of three passionate developers has grown into a diverse group
                 of talented professionals united by a common goal.
               </p>
@@ -46,7 +48,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="relative aspect-video overflow-hidden rounded-lg">
-              <Image src="/placeholder.svg?height=720&width=1280" alt="Our Team" fill className="object-cover" />
+              <Image src={devimg} alt="Our Team" fill className="object-cover" />
             </div>
           </div>
         </div>
@@ -133,14 +135,14 @@ export default function AboutPage() {
             <Card className="bg-white border-none shadow-lg hover:shadow-xl transition-shadow">
               <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
                 <div className="relative w-32 h-32 rounded-full overflow-hidden">
-                  <Image src="/placeholder.svg?height=128&width=128" alt="John Smith" fill className="object-cover" />
+                  <Image src={abhiimg} alt=" Abhishek Jadhav" fill className="object-cover" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold">John Smith</h3>
+                  <h3 className="text-xl font-bold">Abhishek Jadhav</h3>
                   <p className="text-zinc-500">Founder & CEO</p>
                 </div>
                 <p className="text-zinc-500 text-sm">
-                  With over 15 years of experience in software development, John leads our team with vision and
+                  With over 5 years of experience in software development, Abhishek leads our team with vision and
                   technical expertise.
                 </p>
               </CardContent>
@@ -151,17 +153,17 @@ export default function AboutPage() {
                 <div className="relative w-32 h-32 rounded-full overflow-hidden">
                   <Image
                     src="/placeholder.svg?height=128&width=128"
-                    alt="Sarah Johnson"
+                    alt="Vicky Autade"
                     fill
                     className="object-cover"
                   />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold">Sarah Johnson</h3>
+                  <h3 className="text-xl font-bold">Vicky Autade</h3>
                   <p className="text-zinc-500">CTO</p>
                 </div>
                 <p className="text-zinc-500 text-sm">
-                  Sarah oversees our technical strategy and ensures we stay at the forefront of technological
+                  Vicky oversees our technical strategy and ensures we stay at the forefront of technological
                   innovation.
                 </p>
               </CardContent>
@@ -170,24 +172,24 @@ export default function AboutPage() {
             <Card className="bg-white border-none shadow-lg hover:shadow-xl transition-shadow">
               <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
                 <div className="relative w-32 h-32 rounded-full overflow-hidden">
-                  <Image src="/placeholder.svg?height=128&width=128" alt="Michael Chen" fill className="object-cover" />
+                  <Image src ={piyushimg} alt="Michael Chen" fill className="object-cover" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold">Michael Chen</h3>
+                  <h3 className="text-xl font-bold">Piyush Bandal</h3>
                   <p className="text-zinc-500">Lead Designer</p>
                 </div>
                 <p className="text-zinc-500 text-sm">
-                  Michael brings creativity and user-centered design principles to every project we undertake.
+                  Piyush brings creativity and user-centered design principles to every project we undertake.
                 </p>
               </CardContent>
             </Card>
           </div>
           <div className="flex justify-center mt-8">
-            <Link href="/about/team">
+            {/* <Link href="/about/team">
               <Button variant="outline" className="border-zinc-900 text-zinc-900 hover:bg-zinc-900/10">
                 View Full Team
               </Button>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </section>

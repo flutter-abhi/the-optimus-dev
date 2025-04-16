@@ -6,6 +6,20 @@ import { ArrowRight, CheckCircle, Smartphone, TabletSmartphone, Tablet, Layers, 
 import { useState, useEffect, useRef } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ChevronLeft, ChevronRight } from "lucide-react"
+import swift from '../../../public/services/icons/swift.jpeg'
+import swiftuimg from '../../../public/services/icons/swiftui.jpeg'
+import jetimg from '../../../public/services/icons/JetpackCompose.png'
+import kotlinimg from '../../../public/services/icons/kotlin.jpeg'
+import icnic from '../../../public/services/icons/ionic.jpeg'
+import reactimg from '../../../public/services/icons/React-icon.png'
+import flutterimg from '../../../public/services/icons/flutterlogo.png'
+import xamarin from '../../../public/services/icons/xamarin.png'
+import firebaseimg from '../../../public/services/icons/firebase.jpeg'
+import figmaimg from '../../../public/services/icons/figma-logo.png'
+import appcenter from '../../../public/services/icons/appcenter.png'
+import fastlane from '../../../public/services/icons/fastlane.jpeg'
+
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination, Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
@@ -351,7 +365,7 @@ export default function MobileDevelopmentPage() {
                   <Card className="bg-white border-none shadow-sm hover:shadow-md transition-all duration-300">
                     <CardContent className="p-6 flex flex-col items-center text-center">
                       <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                        <Image src="/placeholder.svg?height=64&width=64" alt="Swift" width={64} height={64} />
+                        <Image  src ={swift} alt="Swift" width={64} height={64} />
                       </div>
                       <h3 className="font-medium">Swift</h3>
                     </CardContent>
@@ -362,7 +376,7 @@ export default function MobileDevelopmentPage() {
                   <Card className="bg-white border-none shadow-sm hover:shadow-md transition-all duration-300">
                     <CardContent className="p-6 flex flex-col items-center text-center">
                       <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                        <Image src="/placeholder.svg?height=64&width=64" alt="SwiftUI" width={64} height={64} />
+                        <Image src ={swiftuimg} alt="SwiftUI" width={64} height={64} />
                       </div>
                       <h3 className="font-medium">SwiftUI</h3>
                     </CardContent>
@@ -373,7 +387,7 @@ export default function MobileDevelopmentPage() {
                   <Card className="bg-white border-none shadow-sm hover:shadow-md transition-all duration-300">
                     <CardContent className="p-6 flex flex-col items-center text-center">
                       <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                        <Image src="/placeholder.svg?height=64&width=64" alt="Kotlin" width={64} height={64} />
+                        <Image src ={kotlinimg} alt="Kotlin" width={64} height={64} />
                       </div>
                       <h3 className="font-medium">Kotlin</h3>
                     </CardContent>
@@ -384,7 +398,7 @@ export default function MobileDevelopmentPage() {
                   <Card className="bg-white border-none shadow-sm hover:shadow-md transition-all duration-300">
                     <CardContent className="p-6 flex flex-col items-center text-center">
                       <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                        <Image src="/placeholder.svg?height=64&width=64" alt="Jetpack Compose" width={64} height={64} />
+                        <Image src ={jetimg} alt="Jetpack Compose" width={64} height={64} />
                       </div>
                       <h3 className="font-medium">Jetpack Compose</h3>
                     </CardContent>
@@ -399,7 +413,7 @@ export default function MobileDevelopmentPage() {
                   <Card className="bg-white border-none shadow-sm hover:shadow-md transition-all duration-300">
                     <CardContent className="p-6 flex flex-col items-center text-center">
                       <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                        <Image src="/placeholder.svg?height=64&width=64" alt="React Native" width={64} height={64} />
+                        <Image src ={reactimg} alt="React Native" width={64} height={64} />
                       </div>
                       <h3 className="font-medium">React Native</h3>
                     </CardContent>
@@ -410,7 +424,7 @@ export default function MobileDevelopmentPage() {
                   <Card className="bg-white border-none shadow-sm hover:shadow-md transition-all duration-300">
                     <CardContent className="p-6 flex flex-col items-center text-center">
                       <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                        <Image src="/placeholder.svg?height=64&width=64" alt="Flutter" width={64} height={64} />
+                        <Image src ={flutterimg} alt="Flutter" width={64} height={64} />
                       </div>
                       <h3 className="font-medium">Flutter</h3>
                     </CardContent>
@@ -421,7 +435,7 @@ export default function MobileDevelopmentPage() {
                   <Card className="bg-white border-none shadow-sm hover:shadow-md transition-all duration-300">
                     <CardContent className="p-6 flex flex-col items-center text-center">
                       <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                        <Image src="/placeholder.svg?height=64&width=64" alt="Xamarin" width={64} height={64} />
+                        <Image src ={xamarin} alt="Xamarin" width={64} height={64} />
                       </div>
                       <h3 className="font-medium">Xamarin</h3>
                     </CardContent>
@@ -432,7 +446,7 @@ export default function MobileDevelopmentPage() {
                   <Card className="bg-white border-none shadow-sm hover:shadow-md transition-all duration-300">
                     <CardContent className="p-6 flex flex-col items-center text-center">
                       <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                        <Image src="/placeholder.svg?height=64&width=64" alt="Ionic" width={64} height={64} />
+                        <Image src ={icnic} alt="Ionic" width={64} height={64} />
                       </div>
                       <h3 className="font-medium">Ionic</h3>
                     </CardContent>
@@ -447,7 +461,7 @@ export default function MobileDevelopmentPage() {
                   <Card className="bg-white border-none shadow-sm hover:shadow-md transition-all duration-300">
                     <CardContent className="p-6 flex flex-col items-center text-center">
                       <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                        <Image src="/placeholder.svg?height=64&width=64" alt="Firebase" width={64} height={64} />
+                        <Image src ={firebaseimg}  alt="Firebase" width={64} height={64} />
                       </div>
                       <h3 className="font-medium">Firebase</h3>
                     </CardContent>
@@ -458,7 +472,7 @@ export default function MobileDevelopmentPage() {
                   <Card className="bg-white border-none shadow-sm hover:shadow-md transition-all duration-300">
                     <CardContent className="p-6 flex flex-col items-center text-center">
                       <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                        <Image src="/placeholder.svg?height=64&width=64" alt="App Center" width={64} height={64} />
+                        <Image src ={appcenter}  alt="App Center" width={64} height={64} />
                       </div>
                       <h3 className="font-medium">App Center</h3>
                     </CardContent>
@@ -469,7 +483,7 @@ export default function MobileDevelopmentPage() {
                   <Card className="bg-white border-none shadow-sm hover:shadow-md transition-all duration-300">
                     <CardContent className="p-6 flex flex-col items-center text-center">
                       <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                        <Image src="/placeholder.svg?height=64&width=64" alt="Fastlane" width={64} height={64} />
+                        <Image src ={fastlane}  alt="Fastlane" width={64} height={64} />
                       </div>
                       <h3 className="font-medium">Fastlane</h3>
                     </CardContent>
@@ -480,7 +494,7 @@ export default function MobileDevelopmentPage() {
                   <Card className="bg-white border-none shadow-sm hover:shadow-md transition-all duration-300">
                     <CardContent className="p-6 flex flex-col items-center text-center">
                       <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                        <Image src="/placeholder.svg?height=64&width=64" alt="Figma" width={64} height={64} />
+                        <Image src ={figmaimg}  alt="Figma" width={64} height={64} />
                       </div>
                       <h3 className="font-medium">Figma</h3>
                     </CardContent>
@@ -590,10 +604,15 @@ export default function MobileDevelopmentPage() {
                   </Button>
                 </Link>
                 <Link href="/services">
+                      <Button variant="outline" className="border-white text-white hover:bg-white/10" style={{ color: "black" }}>
+                        Explore Other Services
+                      </Button>
+                    </Link>
+                {/* <Link href="/services">
                   <Button variant="outline" className="border-white text-white hover:bg-white/10">
                     Explore Other Services
                   </Button>
-                </Link>
+                </Link> */}
               </div>
             </ScrollReveal>
           </div>
